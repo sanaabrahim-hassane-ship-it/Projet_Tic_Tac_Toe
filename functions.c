@@ -50,11 +50,11 @@ void joueur_tour(char plateau[9])
     }
 }
 
-void ordinateur_tour(char plateau[9]) 
+void ordinateur_tour(char plateau[9])
 {
-    for (int i = 0; i < 9; i++) 
+    for (int i = 0; i < 9; i++)
     {
-        if (plateau[i] == ' ') 
+        if (plateau[i] == ' ')
         {
             plateau[i] = 'O';
             break;
@@ -62,4 +62,25 @@ void ordinateur_tour(char plateau[9])
     }
 }
 
+int verify_winner(char plateau[9])
+{
+    int i = 0;
+    int combinaisons_victoire[8][3] = {
+        {0, 1, 2}, {3, 4, 5}, {6, 7, 8},
+        {0, 3, 6}, {1, 4, 7}, {2, 5, 8},
+        {0, 4, 8}, {2, 4, 6}};
 
+    while(i < 8)
+    {
+        int option_une = combinaisons_victoire[i][0];
+        int option_deux= combinaisons_victoire[i][1];
+        int option_trois= combinaisons_victoire[i][2];
+
+        if (plateau[option_une] != ' ' && plateau[option_une] == plateau[option_deux] && plateau[option_deux] == plateau[option_trois])
+        {
+            return 1;
+        }
+        i++;
+    }
+    return 0;
+}
