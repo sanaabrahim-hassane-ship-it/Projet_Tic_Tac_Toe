@@ -8,5 +8,6 @@ int main()
 	char plateau[9];
     	int gagnant;
     	bool etat_jeu = true;
+	creation_plateau(plateau);
 	exit(0);
 }
