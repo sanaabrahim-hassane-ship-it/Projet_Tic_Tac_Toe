@@ -9,5 +9,10 @@ int main()
     	int gagnant;
     	bool etat_jeu = true;
 	creation_plateau(plateau);
+	
+	while(etat_jeu)
+	{
+		
+	}
 	exit(0);
 }
