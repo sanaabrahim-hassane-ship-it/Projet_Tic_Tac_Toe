@@ -5,5 +5,8 @@
 
 int main()
 {
+	char plateau[9];
+    	int gagnant;
+    	bool etat_jeu = true;
 	exit(0);
 }
