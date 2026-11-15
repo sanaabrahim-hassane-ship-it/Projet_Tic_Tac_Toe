@@ -13,13 +13,12 @@ void creation_plateau(char plateau[9])
 void afficher_plateau(char plateau[9])
 {
     int i = 0;
-    system("clear");
     while(i < 9)
     {
-        printf("\t %c | %c | %c \n", plateau[i], plateau[i + 1], plateau[i + 2]);
+        printf("	%c | %c | %c \n", plateau[i], plateau[i + 1], plateau[i + 2]);
         if (i < 6) 
         {
-            printf("\t-----------\n");
+            printf("	---------\n");
         }
         i+= 3;
     }
@@ -34,7 +33,7 @@ void joueur_tour(char plateau[9])
         printf("Choisissez où jouer : \n");
         if (scanf("%d", &choix) != 1) 
         {
-            while (getchar() != '\n'); 
+            while (getchar() != '\n');  system("clear");
             printf("Entree invalide. Recommence.\n");
             continue;
         }
@@ -42,7 +41,7 @@ void joueur_tour(char plateau[9])
         {
             plateau[choix] = 'X';
             break;
-        } 
+        }
         else 
         {
             printf("Case invalide : \n");
@@ -98,3 +97,4 @@ int cases_indisponibles(char plateau[9])
     }
     return 1;
 }
+
