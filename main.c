@@ -15,6 +15,13 @@ int main()
 	{
 		afficher_plateau(plateau);
         	joueur_tour(plateau);
+
+		gagnant = verify_winner(plateau);
+        	if (gagnant == 1) 
+        	{
+            		etat_jeu = false;
+        	}
+
 		sleep(1);
 		ordinateur_tour(plateau);
 
