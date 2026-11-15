@@ -84,3 +84,17 @@ int verify_winner(char plateau[9])
     }
     return 0;
 }
+
+int cases_indisponibles(char plateau[9])
+ {
+    int i = 0;
+    while (i < 9) 
+    {
+        if (plateau[i] == ' ') 
+        {
+            return 0;
+        }
+        i++;
+    }
+    return 1;
+}
