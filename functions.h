@@ -3,5 +3,6 @@
 
 void creation_plateau(char plateau[9]);
 void afficher_plateau(char plateau[9]);
+void joueur_tour(char plateau[9]);
 
 #endif

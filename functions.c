@@ -26,4 +26,28 @@ void afficher_plateau(char plateau[9])
     printf("\n");
 }
 
+void joueur_tour(char plateau[9])
+{
+    int choix;
+    while(true)
+    {
+        printf("Choisissez où jouer : \n");
+        if (scanf("%d", &choix) != 1) 
+        {
+            while (getchar() != '\n'); 
+            printf("Entree invalide. Recommence.\n");
+            continue;
+        }
+        if (choix >= 0 && choix <= 8 && plateau[choix] == ' ')
+        {
+            plateau[choix] = 'X';
+            break;
+        } 
+        else 
+        {
+            printf("Case invalide : \n");
+        }
+    }
+}
+
 

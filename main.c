@@ -12,7 +12,8 @@ int main()
 	
 	while(etat_jeu)
 	{
-		
+		afficher_plateau(plateau);
+        	joueur_tour(plateau);
 	}
 	exit(0);
 }
