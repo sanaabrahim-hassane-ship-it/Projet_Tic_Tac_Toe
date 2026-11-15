@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #include "functions.h"
 
@@ -14,6 +15,8 @@ int main()
 	{
 		afficher_plateau(plateau);
         	joueur_tour(plateau);
+		sleep(1);
+		ordinateur_tour(plateau);
 	}
 	exit(0);
 }

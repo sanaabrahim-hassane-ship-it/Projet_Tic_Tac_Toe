@@ -50,4 +50,16 @@ void joueur_tour(char plateau[9])
     }
 }
 
+void ordinateur_tour(char plateau[9]) 
+{
+    for (int i = 0; i < 9; i++) 
+    {
+        if (plateau[i] == ' ') 
+        {
+            plateau[i] = 'O';
+            break;
+        }
+    }
+}
+
 
